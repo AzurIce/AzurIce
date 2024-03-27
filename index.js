@@ -135,6 +135,7 @@ function clickEffect() {
 window.onload = function () {
   clickEffect();
   show_runtime();
+  init_pic_3d()
 }
 
 function show_runtime() {
@@ -152,4 +153,49 @@ function show_runtime() {
   C = Math.floor((b - B) * 60);
   D = Math.floor((c - C) * 60);
   runtime_span.innerHTML = "网站在各种灾难中运行了: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+}
+
+function init_pic_3d() {
+  var boxs = document.getElementsByClassName('image-container');
+
+  var update = function (e, img, mouse) {
+    mouse.updatePosition(e);
+
+    const x = (mouse.y / img.offsetHeight / 2).toFixed(2)
+    const y = (mouse.x / img.offsetWidth / 2).toFixed(2)
+
+    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+    img.style.transform = style;
+    img.style.webkitTransform = style;
+    img.style.mozTransform = style;
+    img.style.msTransform = style;
+    img.style.oTransform = style;
+  };
+
+  for (let i = 0; i < boxs.length; i++) {
+    var box = boxs.item(i)
+    var img = box.children[0]
+
+    // Mouse 
+    var mouse = {
+      origin_x: Math.floor(box.offsetWidth / 2),
+      origin_y: Math.floor(box.offsetHeight / 2),
+      x: 0,
+      y: 0,
+      updatePosition: function (e) {
+        this.x = e.offsetX - this.origin_x;
+        this.y = (e.offsetY - this.origin_y) * -1;
+      },
+    }
+
+    box.onmouseleave = function () {
+      img.style = "";
+    }
+    box.onmouseenter = function (e) {
+      update(e, img, mouse)
+    }
+    box.onmousemove = function (e) {
+      update(e, img, mouse)
+    }
+  }
 }

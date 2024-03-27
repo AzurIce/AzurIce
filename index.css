@@ -103,6 +103,7 @@ nav {
     .banner-container {
         flex-direction: row;
     }
+
     .github-status-container {
         width: -moz-fit-content;
         width: fit-content;
@@ -192,11 +193,40 @@ header h3 {
     z-index: 10;
 }
 
+.table-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.table-label {
+    font-size: smaller;
+    margin-top: 1rem;
+    color: #888888;
+    text-decoration: underline;
+}
+
+.table-label::before {
+    content: '🎈'
+}
+
+.table-label::after {
+    content: '🎈'
+}
+
+#texas {
+    filter: drop-shadow(#F6262B7C 0px 0px 10px);
+    transition: transform 0.2s;
+}
+
 .image-container {
     width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    perspective: 40px;
 }
 
 .image-label {
@@ -287,11 +317,13 @@ table {
     word-break: initial;
     background-color: var(--table-bg-color);
 }
+
 table tr {
     border-top: .1em solid var(--table-border-color);
     margin: 0;
     padding: 0;
 }
+
 table th {
     font-weight: bold;
     border: .1em solid var(--table-border-color);
@@ -299,21 +331,26 @@ table th {
     margin: 0;
     padding: 6px 13px;
 }
+
 table td {
     border: .1em solid var(--table-border-color);
     margin: 0;
     padding: 6px 13px;
 }
+
 table thead {
     background-color: var(--table-header-bg-color);
 }
+
 table tr:nth-child(2n) {
     background-color: var(--table-n2-bg-color);
 }
+
 table tr th:first-child,
 table tr td:first-child {
     margin-top: 0;
 }
+
 table tr th:last-child,
 table tr td:last-child {
     margin-bottom: 0;
