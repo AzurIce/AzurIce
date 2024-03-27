@@ -99,12 +99,24 @@ nav {
     justify-content: center;
 }
 
+@media (min-width: 1024px) {
+    .banner-container {
+        flex-direction: row;
+    }
+    .github-status-container {
+        width: -moz-fit-content;
+        width: fit-content;
+        flex-direction: column;
+    }
+}
+
 .banner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     max-width: 56rem;
+    margin-bottom: 2rem;
 }
 
 #banner-l {
