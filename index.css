@@ -82,6 +82,10 @@ nav {
 }
 
 @media (min-width: 1024px) {
+    .banner {
+        gap: 1rem;
+    }
+
     .banner-container {
         flex-direction: row;
     }
@@ -96,7 +100,7 @@ nav {
 .banner {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     max-width: 56rem;
     margin-bottom: 2rem;
