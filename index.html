@@ -1,33 +1,192 @@
-<body>
-    <img id="myPicture" style="width:100%">
+<!DOCTYPE html>
+<html lang="en">
 
-    <script>
-        window.onload = choosePic;
-        function choosePic() {
-            var picData = new Array(
-                "https://www.helloimg.com/images/2022/09/09/ZIRjIn.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZxub.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZqNK.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIR8AE.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRK0Y.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRr9g.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRUj9.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRkEX.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRVkM.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRf1P.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRhb6.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZ5Az.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIRyRR.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZBNA.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZJJo.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZmOD.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZeL1.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZsrS.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZAlQ.png",
-                "https://www.helloimg.com/images/2022/09/09/ZIZ43C.png"
-            );
-            var randomNum = Math.floor((Math.random() * picData.length));
-            document.getElementById("myPicture").src = picData[randomNum];
-        }
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AzurIce</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <div class="snow-container">
+    <div class="snow foreground"></div>
+    <div class="snow foreground layered"></div>
+    <div class="snow middleground"></div>
+    <div class="snow middleground layered"></div>
+    <div class="snow background"></div>
+    <div class="snow background layered"></div>
+  </div>
+
+  <nav class="nav-container">
+    <span>AzurIce's page</span>
+    <div class="nav-social">
+      <div class="nav-social-icon-container">
+        <a href="https://github.com/azurice" target="_blank" rel="noopener noreferer" class="social-icon">
+          <svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <title>GitHub</title>
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <div class="nav-social-icon-container">
+        <a href="https://space.bilibili.com/46452693" target="_blank" rel="noopener noreferer" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <title>BiliBili</title>
+            <path
+              d="M7.17157 2.75737L10.414 5.99948H13.585L16.8284 2.75737C17.219 2.36685 17.8521 2.36685 18.2426 2.75737C18.6332 3.1479 18.6332 3.78106 18.2426 4.17158L16.414 5.99948L18.5 6.00001C20.433 6.00001 22 7.56701 22 9.50001V17.5C22 19.433 20.433 21 18.5 21H5.5C3.567 21 2 19.433 2 17.5V9.50001C2 7.56701 3.567 6.00001 5.5 6.00001L7.585 5.99948L5.75736 4.17158C5.36684 3.78106 5.36684 3.1479 5.75736 2.75737C6.14788 2.36685 6.78105 2.36685 7.17157 2.75737ZM18.5 8.00001H5.5C4.7203 8.00001 4.07955 8.5949 4.00687 9.35555L4 9.50001V17.5C4 18.2797 4.59489 18.9205 5.35554 18.9931L5.5 19H18.5C19.2797 19 19.9204 18.4051 19.9931 17.6445L20 17.5V9.50001C20 8.67158 19.3284 8.00001 18.5 8.00001ZM8 11C8.55228 11 9 11.4477 9 12V14C9 14.5523 8.55228 15 8 15C7.44772 15 7 14.5523 7 14V12C7 11.4477 7.44772 11 8 11ZM16 11C16.5523 11 17 11.4477 17 12V14C17 14.5523 16.5523 15 16 15C15.4477 15 15 14.5523 15 14V12C15 11.4477 15.4477 11 16 11Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="banner-container">
+      <div id="banner-l"></div>
+      <div id="banner-r"></div>
+      <div class="banner">
+        <h1>
+          <span class="banner-hero-h1">Aoike青池</span>
+        </h1>
+        <h2>AzurIce's Blog</h2>
+        <h3>「看清世界的真相后仍热爱生活」</h3>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="github-status-container">
+      <img title="github-readme-stats"
+        src="https://github-readme-stats.vercel.app/api?username=azurice&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
+
+      <img title="Top Langs"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=AzurIce&layout=compact&hide=Jupyter%20Notebook,html,css" />
+    </div>
+
+    <div style="display: flex; flex-direction: column; margin-top: 2rem;">
+      <h2>老师的任务罢了</h2>
+      <p class="my-4 leading-7">制作一个静态的 <strong class="font-semibold">个人主页</strong> / <strong
+          class="font-semibold">交大门户主页</strong> / <strong class="font-semibold">个人主页</strong>
+        要求：</p>
+      <ul class="list-disc pl-5 my-4 leading-7">
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <p class="my-4 leading-7">页面具有
+            <s><code>header</code></s>、<code>sidebar</code>、<s><code>content</code></s>、<s><code>footer</code></s>
+            等基本结构
+          </p>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <p class="my-4 leading-7"><s>content 的内同形式至少5种（文本，标题，图片，列表，表格</s>）</p>
+          <div class="image-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>第一列</th>
+                  <th>第二列</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>对么？</td>
+                  <td>对的对的</td>
+                </tr>
+                <tr>
+                  <td>不对吧对什么啊</td>
+                  <td>不对吗？对吧？</td>
+                </tr>
+                <tr>
+                  <td>嘶，对么？</td>
+                  <td>哦对的对的，是对的</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="image-label">给你个表格，附赠两个伪类</span>
+          </div>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <p class="my-4 leading-7">使用 flex 布局,使用至少5个提到的 felx 属性</p>
+          <code>flex-direction</code>、
+          <code>justify-content</code>、
+          <code>align-items</code>、
+          <code>flex-wrap</code>、
+          <code></code>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">使用到至少两种 position</p></s>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <p class="my-4 leading-7">页面中要有一个悬浮组件，里面包含文本和图片</p>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <p class="my-4 leading-7">响应 pc 和 mobile，两种页面有不同布局</p>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">使用 2 种伪类</p></s>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">使用两种伪元素</p></s>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">编码习惯优雅</p></s>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">使用 css 动画加分</p></s>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">使用 css transform 加分</p></s>
+        </li>
+        <li class="[&amp;:not(:first-child)]:mt-2">
+          <s><p class="my-4 leading-7">可以在网上寻找灵感，但不可 copy 抄袭</p></s>
+        </li>
+      </ul>
+    </div>
+
+    <div class="image-container" style="">
+      <image title="texas" src="./wallhaven-wqko7p.png" width="100%"
+        style="filter: drop-shadow(#F6262B7C 0px 0px 10px);" />
+      <span class="image-label">嘿嘿，德克萨斯🤤</span>
+    </div>
+
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+    <p>哥，前端是啥</p>
+  </div>
+
+  <footer
+    style="display: flex; flex-direction: column; align-items: center; padding: 2rem; z-index: 20; border: solid 1px #eeeeee; position: relative;">
+    <span id="runtime-span" style="color: #666666;"></span>
+    <div style="color: #666666b3;">
+      Copyright © 2020 - 2023 AzurIce
+    </div>
+    <div>
+      <span style="color: #666666b3;">Made With</span>
+      <span style="color: #666666;">Brain and Hand</span>
+    </div>
+  </footer>
+
+  <!-- <div id="banner" style="display: flex; flex-direction: column; align-items: center;">
+    <span style="font-size: 7rem; color: #ffffff;">AzurIce</span>
+  </div> -->
 </body>
+
+</html>
