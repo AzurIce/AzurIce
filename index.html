@@ -44,6 +44,7 @@
       </div>
     </div>
   </nav>
+
   <header>
     <div class="banner-container">
       <div id="banner-l"></div>
@@ -66,127 +67,237 @@
     </div>
   </header>
 
-  <div class="content">
-
-    <div style="display: flex; flex-direction: column; margin-top: 2rem;">
-      <h2>老师的任务罢了</h2>
-      <p class="my-4 leading-7">制作一个静态的 <strong class="font-semibold">个人主页</strong> / <strong
-          class="font-semibold">交大门户主页</strong> / <strong class="font-semibold">个人主页</strong>
-        要求：</p>
-      <ul class="list-disc pl-5 my-4 leading-7">
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <p class="my-4 leading-7">页面具有
-            <s><code>header</code></s>、<code>sidebar</code>、<s><code>content</code></s>、<s><code>footer</code></s>
-            等基本结构
-          </p>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <p class="my-4 leading-7"><s>content 的内同形式至少5种（文本，标题，图片，列表，表格</s>）</p>
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>第一列</th>
-                  <th>第二列</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>对么？</td>
-                  <td>对的对的</td>
-                </tr>
-                <tr>
-                  <td>不对吧对什么啊</td>
-                  <td>不对吗？对吧？</td>
-                </tr>
-                <tr>
-                  <td>嘶，对么？</td>
-                  <td>哦对的对的，是对的</td>
-                </tr>
-              </tbody>
-            </table>
-            <span class="table-label">给你个表格，附赠两个伪类</span>
-          </div>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <p class="my-4 leading-7">使用 flex 布局,使用至少5个提到的 felx 属性</p>
-          <code>flex-direction</code>、
-          <code>justify-content</code>、
-          <code>align-items</code>、
-          <code>flex-wrap</code>、
-          <code></code>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">使用到至少两种 position</p>
-          </s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <p class="my-4 leading-7">页面中要有一个悬浮组件，里面包含文本和图片</p>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s><p class="my-4 leading-7">响应 pc 和 mobile，两种页面有不同布局</p></s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">使用 2 种伪类</p>
-          </s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">使用两种伪元素</p>
-          </s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">编码习惯优雅</p>
-          </s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">使用 css 动画加分</p>
-          </s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">使用 css transform 加分</p>
-          </s>
-        </li>
-        <li class="[&amp;:not(:first-child)]:mt-2">
-          <s>
-            <p class="my-4 leading-7">可以在网上寻找灵感，但不可 copy 抄袭</p>
-          </s>
-        </li>
-      </ul>
+  <div class="floating-container">
+    <span>这是个浮动窗口</span>
+    <div style="height: 140px; width: 100%; position: relative">
+      <video autoplay loop muted style="height: 100%; width: 100%; object-fit: cover; position: absolute; top: -25px;">
+        <source src="./缄默德克萨斯-默认-正面-Idle-x1.webm" type="video/webm" />
+      </video>
     </div>
-
-    <div class="image-container" style="">
-      <image id="texas" title="texas" src="./wallhaven-wqko7p.png" width="100%" />
-      <span class="image-label">嘿嘿，德克萨斯🤤</span>
-    </div>
-
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
-    <p>哥，前端是啥</p>
+    <span>视频 = 图片 Pro Plus</span>
   </div>
 
+  <main>
+    <div class="content">
+      <div style="display: flex; flex-direction: column; margin-top: 2rem;">
+        <h2>老师的任务罢了</h2>
+        <p class="my-4 leading-7">制作一个静态的 <strong class="font-semibold">个人主页</strong> / <strong
+            class="font-semibold">交大门户主页</strong> / <strong class="font-semibold">个人主页</strong>
+          要求：</p>
+        <ul class="list-disc pl-5 my-4 leading-7">
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">页面具有
+                <s><code>header</code></s>、<s><code>sidebar</code></s>、<s><code>content</code></s>、<s><code>footer</code></s>
+                等基本结构
+              </p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <p class="my-4 leading-7"><s>content 的内同形式至少5种（文本，标题，图片，列表，表格</s>）</p>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>第一列</th>
+                    <th>第二列</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>对么？</td>
+                    <td>对的对的</td>
+                  </tr>
+                  <tr>
+                    <td>不对吧对什么啊</td>
+                    <td>不对吗？对吧？</td>
+                  </tr>
+                  <tr>
+                    <td>嘶，对么？</td>
+                    <td>哦对的对的，是对的</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="table-label">给你个表格，附赠两个伪类</span>
+            </div>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">使用 flex 布局,使用至少5个提到的 felx 属性</p>
+            </s>
+            <code>flex-direction</code>、
+            <code>justify-content</code>、
+            <code>align-items</code>、
+            <code>flex-wrap</code>、
+            <code>flex-grow</code>、
+            <code>flex-shrink</code>、
+            ......
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">使用到至少两种 position</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <p class="my-4 leading-7">页面中要有一个悬浮组件，里面包含文本和图片</p>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">响应 pc 和 mobile，两种页面有不同布局</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">使用 2 种伪类</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">使用两种伪元素</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">编码习惯优雅</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">使用 css 动画加分</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">使用 css transform 加分</p>
+            </s>
+          </li>
+          <li class="[&amp;:not(:first-child)]:mt-2">
+            <s>
+              <p class="my-4 leading-7">可以在网上寻找灵感，但不可 copy 抄袭</p>
+            </s>
+          </li>
+        </ul>
+
+        <div class="image-container">
+          <image id="texas" title="texas" src="./wallhaven-wqko7p.png" width="100%" />
+          <span class="image-label">嘿嘿，德克萨斯🤤</span>
+        </div>
+
+        <h2>1h2</h2>
+        <p>哥，前端是啥</p>
+        <h2>2h2</h2>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <h2>3h2</h2>
+        <h3>3h2-1h3</h3>
+        <p>哥，前端是啥</p>
+        <h3>3h2-2h3</h3>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <h3>3h2-3h3</h3>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <h2>4h2</h2>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+        <p>哥，前端是啥</p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="toc-container">
+        <h3>这是个侧边栏</h3>
+        <span>以及虚假的 TOC，我懒逼了，还有一堆别的代码等着我写呢，不管了</span>
+        <ul>
+          <li>
+            <a href="#老师的任务罢了" class="toc_link">
+              <span class="md-ellipsis">
+                老师的任务罢了
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#1h2" class="toc_link">
+              <span class="md-ellipsis">
+                1h2
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#2h2" class="toc_link">
+              <span class="md-ellipsis">
+                2h2
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#3h2" class="toc_link">
+              <span class="md-ellipsis">
+                3h2
+              </span>
+            </a>
+
+            <nav aria-label="3h2-1h3">
+              <ul>
+                <li>
+                  <a href="#调度器" class="toc_link">
+                    <span class="md-ellipsis">
+                      3h2-1h3
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav aria-label="3h2-2h3">
+              <ul>
+                <li>
+                  <a href="#调度器" class="toc_link">
+                    <span class="md-ellipsis">
+                      3h2-2h3
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav aria-label="3h2-3h3">
+              <ul>
+                <li>
+                  <a href="#调度器" class="toc_link">
+                    <span class="md-ellipsis">
+                      3h2-3h3
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+
+          <li>
+            <a href="#4h2" class="toc_link">
+              <span class="md-ellipsis">
+                4h2
+              </span>
+            </a>
+      </div>
+      <!-- TODO: TOC -->
+      </aside>
+  </main>
+
+
   <footer
-    style="display: flex; flex-direction: column; align-items: center; padding: 2rem; z-index: 20; border: solid 1px #eeeeee; position: relative;">
+    style="display: flex; flex-direction: column; align-items: center; padding: 2rem; border: solid 1px #eeeeee; position: relative;">
     <span id="runtime-span" style="color: #666666;"></span>
     <div style="color: #666666b3;">
       Copyright © 2020 - 2023 AzurIce
