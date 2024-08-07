@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=azurice%2FAzurIce&labelColor=%23697689&countColor=%2337d67a)
+
 <!--
 **AzurIce/AzurIce** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
