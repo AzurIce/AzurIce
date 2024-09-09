@@ -23,7 +23,7 @@ Here are some ideas to get you started:
 - ⚡ Skills - Full stack
   - Language: Rust, Golang, Python, C/CPP, Java, ...
   - Frontend Framework: Vue, React, Svelte, Solidjs, ...
-- 📫 How to reach me: mailto:973562770@qq.com, azurice@petalmail.com
+- 📫 How to reach me: 973562770@qq.com, azurice@petalmail.com
 
 
 <img align="right" src="https://github-readme-stats.vercel.app/api?username=azurice&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
