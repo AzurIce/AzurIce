@@ -38,7 +38,7 @@ More about myself:
   - ♥️ ACG and Calssical music
   - 🎹 Main instrument: I mainly plays piano, and I'm a Big fan of Animenzzz! Sometimes I upload my performance video to [bilibili](https://space.bilibili.com/46452693)
   - 🎼 Orchestra: I'm playing Double Bass in BJTU Symphony Orchestra
-  - A very very little bit: violin, Guitar, GuZheng, Bamboo flute, ErHu
+  - A very very little bit: violin, guitar, GuZheng, Bamboo flute, ErHu
 - **ACGNM**
 
   Anime:
