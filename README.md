@@ -43,7 +43,7 @@ More about myself:
 
   Anime:
   - The most important one (As well as the first one): 四月は君の嘘 (Your Lie in April)
-  - Favourite ones: ソードアート・オンライン (*Sword Art Online*) **||** 響け！ユーフォニアム (*Sound! Euphonium*) **||** やがて君になる (*Bloom Into You*) **||** ギルティクラウン (*Guilty Crown*) **||** ヴァイオレット・エヴァーガーデン (*Violet Evergarden*)
+  - Favourite ones: ソードアート・オンライン (*Sword Art Online*) **||** 響け！ユーフォニアム (*Sound! Euphonium*) **||** やがて君になる (*Bloom Into You*) **||** ギルティクラウン (*Guilty Crown*) **||** ヴァイオレット・エヴァーガーデン (*Violet Evergarden*) **||** ガールズバンドクライ (*Girls Band Cry*) 
   - Others I like (So many...): EVA, とある科学の超電磁砲 (*A Certain Scientific Railgun*) **||** CLANNAD **||** Love Live **||** BanG Dream! **||** K-ON **||** 少女☆歌剧 Revue Starlight **||** 魔女の旅々 (*Wandering Witch: The Journey of Elaina*) **||** ぼっち・ざ・ろっく！ (*Bocchi the rock*) **||** ウマ娘 プリティーダービー (*Pretty Derby*) **||** ロクでなし魔術講師と禁忌教典 (*Akashic records of bastard magic instructor*) **||** 青春ブタ野郎, ...
   
   Gaming: Here is my steam profile: [AzurIce](https://steamcommunity.com/id/AzurIce)
