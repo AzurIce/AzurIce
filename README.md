@@ -31,17 +31,19 @@ Here are some ideas to get you started:
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AzurIce&layout=compact&hide=Jupyter%20Notebook,html,css" alt="Top Langs">
 </div>
 
----
+### More about myself
 
-More about myself:
-
-- **Music**
+<details>
+  <summary>🎶Music</summary>
+  
   - ♥️ ACG and Calssical music
   - 🎹 Main instrument: I mainly plays piano, and I'm a Big fan of Animenzzz! Sometimes I upload my performance video to [bilibili](https://space.bilibili.com/46452693)
   - 🎼 Orchestra: I'm playing Double Bass in BJTU Symphony Orchestra
   - A very very little bit: violin, guitar, GuZheng, Bamboo flute, ErHu
-- **ACGNM**
+</details>
 
+<details>
+  <summary>🎮ACGNM</summary>
   Anime:
   - The most important one (As well as the first one): 四月は君の嘘 (Your Lie in April)
   - Favourite ones: ソードアート・オンライン (*Sword Art Online*) **||** 響け！ユーフォニアム (*Sound! Euphonium*) **||** やがて君になる (*Bloom Into You*) **||** ギルティクラウン (*Guilty Crown*) **||** ヴァイオレット・エヴァーガーデン (*Violet Evergarden*) **||** ガールズバンドクライ (*Girls Band Cry*) 
@@ -58,3 +60,4 @@ More about myself:
   - Paradox: Stellaris, City: Skylines
   - Yogsothoth's Yard
   - ......
+</details>
