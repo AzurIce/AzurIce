@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 
 - :mortar_board: BJTU School of Software Engineering 
 - 🔭 Working on [Ice](https://github.com/AzurIce/ice), a Minecraft Cli Helper to manage mods and host servers
-- 🔭 Working on [Ranim](https://github.com/AzurIce/ranim), an animation engine implemented in rust, inspired by [3b1b/manim: Animation engine for explanatory math videos](https://github.com/3b1b/manim) and [jkjkil4/JAnim: A library for creating smooth animations](https://github.com/jkjkil4/JAnim)
+- 🔭 Working on [Ranim](https://github.com/AzurIce/ranim), an animation engine implemented in rust, inspired by [3b1b/manim](https://github.com/3b1b/manim) and [jkjkil4/JAnim](https://github.com/jkjkil4/JAnim)
 - 🌱 Learning <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/rust.svg" width="16" height="16"> Rust and Game Dev related things
 - ⚡ Skills - Full stack
   - Language: Rust, Golang, Python, C/CPP, Java, JS/TS, ...
