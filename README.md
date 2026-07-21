@@ -20,6 +20,7 @@ Here are some ideas to get you started:
 - :mortar_board: BJTU School of Software Engineering 
 - 🔭 Working on [ice](https://github.com/AzurIce/ice), a Minecraft Cli Helper to manage mods and host servers
 - 🔭 Working on [ranim](https://github.com/AzurIce/ranim), an animation engine implemented in rust, inspired by [3b1b/manim](https://github.com/3b1b/manim) and [jkjkil4/JAnim](https://github.com/jkjkil4/JAnim)
+- 🔭 Working on [notist](https://github.com/AzurIce/notist), a typst-like document language to replace markdown
 - 🔭 Working on [xiv-companion](https://github.com/AzurIce/xiv-companion), a Final Fatasy Companion App with everything you need. (WIP)
 - 🌱 Learning <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/rust.svg" width="16" height="16"> Rust and Game Dev related things
 - ⚡ Skills - Full stack
