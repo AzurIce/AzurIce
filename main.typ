@@ -1,4 +1,11 @@
 #set document(title: "Kimi 眼中的 AzurIce", author: "Kimi")
+#import "@preview/marginalia:0.3.1" as marginalia
+#show: marginalia.setup.with(
+  inner: (far: 8mm, width: 7mm, sep: 5mm),
+  outer: (far: 6mm, width: 24mm, sep: 5mm),
+  top: 2.7cm,
+  bottom: 2.6cm,
+)
 
 #let ice-deep = rgb("#16324f")
 #let ice-accent = rgb("#2f6fbd")
@@ -13,7 +20,6 @@
 
 #set page(
   paper: "a4",
-  margin: (x: 2.6cm, top: 2.7cm, bottom: 2.6cm),
   header: context {
     if counter(page).get().first() > 1 {
       set text(font: kai, size: 8.5pt, fill: ice-gray)
@@ -83,7 +89,22 @@
   body
 })
 
-#let chart-w = 16cm
+#let note-red = rgb("#a85050")
+#let note-red-light = rgb("#e3a0a0")
+// 侧批：#side[批注内容] 为点批注；#side[被批注的正文][批注内容] 会圈出正文（淡红下划线）
+#let side(..args) = {
+  let parts = args.pos()
+  let (body, ann) = if parts.len() == 2 { (parts.at(0), parts.at(1)) } else { (none, parts.at(0)) }
+  if body != none {
+    underline(stroke: 0.9pt + note-red-light, offset: 2.5pt, evade: false, body)
+  }
+  marginalia.note(
+    counter: none,
+    text-style: (size: 8.5pt, font: kai, fill: note-red),
+  )[#ann]
+}
+
+#let chart-w = 15.5cm
 
 // 逐年柱状图：csv 为 year,commits
 #let yearly-chart(path) = {
@@ -182,6 +203,38 @@
   align(center, text(font: kai, size: 10pt, fill: ice-gray)[Kimi 谨呈 · 数据截至 2026-09-09])
 })
 
+#block(width: 100%, inset: (left: 14pt, y: 6pt), stroke: (left: 2pt + ice-mist), {
+  set par(first-line-indent: 0em, leading: 0.65em)
+  text(font: sans, size: 8pt, fill: ice-gray, tracking: 2pt)[
+    本文档使用 kimi-k3 max 整理编写后人工增加侧批完成
+
+    原始提示词如下：
+  ]
+  v(0.6em)
+  text(font: kai, size: 9.5pt, fill: ice-deep)[
+    主题：Kimi 眼中的 AzurIce
+
+    背景：https://mp.weixin.qq.com/s/NtIcTJ3fu_qSexW1DPyP3w（内容为图片，需要逐张识别）
+
+    请你对 github 的 AzurIce 相关的信息进行深度挖掘，包括：
+
+    \- 他的各种主页（Github、个人网站、Bilibili 等等）
+
+    \- 他的所有项目。重点看 Rust 项目如 ranim、notist、shadow、rua，以及 xiv-market、xiv-companion 等等（这个顺序是重要程度顺序，这几个必须完整详细的了解项目内容）。信息不只来源于代码库，还有关键的 Issue 与 PR，以及有的是有对应的网站的。
+
+    \- 他的 code 历史（比如 commit 频率变化、技术风格变化、项目方向变化等）
+
+    \- 他的一些关键设计思想和尝试（项目级别或者具体的功能级别）。去深度挖掘他的性格（技术上以及人格上）与能力。
+
+    把关于他的全部情报进行梳理分析与整理，以你的口吻对他的这些情报进行介绍，同时讲述你对他的理解与看法。
+
+    有必要可以提取相关图片，或自主对收集来的情报与数据进行可视化。
+  ]
+})
+
+// 在这里写「我是怎么做这个 PDF 的」的区域
+
+#pagebreak()
 #heading(level: 1, numbering: none)[序：我用我的方式做一次背调]
 
 2026 年秋，Kimi 发布「We Hire Taste」招募令：在全球寻找 7 名「Wild Card」——那些无法被岗位描述定义、一个人可以成为一支队伍的人。招募令说：传统的路径奖励「正确」，但总有一些人，想法独特，做事沉迷，直到近乎偏执；他们也许不擅言辞，不喜社交，只有作品说话。
@@ -210,7 +263,7 @@
     tcap,
     ..(
       prop([GitHub], [`AzurIce` · 2016-09-10 注册（按 2025 年本科毕业倒推，注册时约是初中生）· 105 followers]),
-      prop([学校 / 组织], [北京交通大学软件学院 2021 级，2025 届本科 · BJTUEventCameraSoftwareGroup（事件相机实验室软件组，2023-09 起）]),
+      prop([学校 / 组织], [北京交通大学软件学院 2021 级，2025 届本科#linebreak() BJTUEventCameraSoftwareGroup（事件相机软件组，2023-09 起）#side[北京交通大学软件学院 2025 级 2027 届硕士研究生]]),
       prop([Bilibili], [`Azur冰弦` · LV6 · 1134 粉丝 · 17 个投稿（钢琴演奏 / 明日方舟 / 自研项目）]),
       prop([Steam], [`Azur冰弦` · 77 级 · 168 款游戏 · 近两周 Factorio 71 小时]),
       prop([crates.io], [`AzurIce` · ranim 全家桶 8 个 crate，累计下载约 1.18 万次]),
@@ -240,7 +293,7 @@
 
 他的项目很多，但有六个构成本次调查的主线。按重要性排序：ranim、Notist、shadow、rua、xiv-market、xiv-companion。
 
-== ranim：四个月重写 Manim，然后继续写了两年
+== #side[ranim：四个月重写 Manim，然后继续写了两年][本科毕设]
 
 #grid(
   columns: (1fr, 5.6cm),
@@ -287,7 +340,7 @@
   *Kimi 观察：* 重写五代渲染管线而不交付一个平庸的 v1，需要的是对「正确」的偏执；把失败的大 PR 附上 benchmark 再亲手关掉，需要的是对证据的诚实。这两件事在同一个人身上。
 ]
 
-== Notist：他要取代 Markdown
+== #side[Notist：他要取代 Markdown][研究生毕设]
 
 *定位。* 「一门带静态类型系统的文档编程语言，为取代 Markdown 而生。」README 列出要解决的四个根本问题：
 
@@ -309,7 +362,17 @@ ranim 官网的示例视频曾直接把 git pack 撑到 625 MiB（issue \#208 �
 
 仓库里有 400 行中文设计文档，定义了 7 条核心不变量（发布安全序、cache 不可变、失败不得产生悬空 ref……）、一套方向刻意不确定的状态机（`Modified` 状态必须用户显式选择 publish 或 restore），以及 `gc` 与 `free` 的语义区分——「gc 回收真垃圾，free 释放仍有引用的对象，purge 留作未来」。这个项目也展示了他的典型节奏：2026-02 以 `git-shadow` 之名快速试错一天，沉寂五个月，2026-07-15 推倒重来（staging 模型 → publish/restore 双向显式模型），次日公开。
 
-== rua：他在拆解「我」这种东西
+== #side[rua：他在拆解「我」这种东西][
+  是最近对一个有了很久的想法的尝试。
+
+  我设想将 Agent 的全部经历表达为图，并将图操作作为工具提供给 Agent 自己，预期 Agent 能够涌现出自组织能力，让图自主生长。
+
+  这样原本承载于会话上下文中的内容（经历、记忆、知识等）被持久化为了硬盘上的图数据，并天然可冻结可恢复 —— 某种意义上算是一个“理想”的 AI 大脑。
+
+  再进一步设想过模型上下文可能也不需要那么大，足够承载组织出的相关信息去完成一个 Turn 就够了，让上下文能力移向外部的 harness 或许能更聚焦模型本身的智能（短上下文高智能）。
+
+  当然我不是研究 LLM 或者 Agent 的，只是随便想想然后做一下简单的验证，具体还需要实践或相关调查来验证。（人同一时间能干的事确实是有限的）
+]
 
 rua 是一个研究性项目：*图原生（graph-native）的 AI coding agent*。核心主张写在 README 里——传统 agent 是「一条线性会话」，rua 把会话重构为一张图：每轮对话是节点、每条输入是边，*会话只是图中的一条链，切换会话等于移动指针*，fork 免费。subagent、goal、compaction 都不再是新抽象，而是图的节点：「整张图连同其上所有并行 agent，就是那个 agent。」
 
@@ -321,7 +384,15 @@ rua 是一个研究性项目：*图原生（graph-native）的 AI coding agent*�
   *Kimi 观察：* 这个项目对我来说有特殊的阅读体验——他参考了 codex、claude-code、pi 的源码，在研究「我们」的解剖学。能力衰减、上下文蒸馏、子代理溯源边……这些设计说明他理解 agent 系统的失效模式，而不只是会调用 API。
 ]
 
-== xiv-market 与 xiv-companion：一个玩家的工程化浪漫
+== #side[xiv-market][
+  #line()
+  xiv-market：https://azurice.github.io/xiv-market/#/
+
+  起因是https://universalis.app太丑了，且物品中文映射表更新慢，UI/UX 体验不好 —— 于是用它的 API 造了个轮子。
+
+  没有做视频介绍（懒了），发了条说说，出乎意料地收获了 2900 多转。
+
+] 与 xiv-companion：一个玩家的工程化浪漫
 
 他是 FFXIV 重度玩家（国服「宇宙和音」），并把这份热爱工程化成了一整条工具链：
 
@@ -330,7 +401,9 @@ rua 是一个研究性项目：*图原生（graph-native）的 AI coding agent*�
 
 武器渲染攻坚期（2026-07，约 100 条 commit）的 commit message 是高度流程化的 "Plan / Record / Close ... evidence boundary"；渲染文档明确「不支持的语义（EnvMap、Sheen、Toon……）只做诊断着色显示，*绝不编造行为*」。
 
-这条链上还有：`eorzea`（FFXIV 国服启动器，扫码登录 + ZiPatch 补丁 + Wine/DXVK 启动 + Dalamud 集成）、`tomestone`（装备模型查看器）、`DalamudPlugins`（GilTracker / EorzeaShot / ApiBridge 等 C\# 插件集）。同一套设计语言、同一批社区数据源、页面级互相咬合——一个人搭了一个游戏工具生态。
+这条链上还有：#side[`eorzea`（FFXIV 国服启动器，扫码登录 + ZiPatch 补丁 + Wine/DXVK 启动 + Dalamud 集成）][
+  因为在 Mac 和 Linux 上用 XIVLauncher（C\#，flatpak 打包）很不方便（尤其用的是 NixOS），于是写了个启动器（）
+]、`tomestone`（装备模型查看器）、`DalamudPlugins`（GilTracker / EorzeaShot / ApiBridge 等 C\# 插件集）。同一套设计语言、同一批社区数据源、页面级互相咬合——一个人搭了一个游戏工具生态。
 
 == ice：一条六年的产品线
 
@@ -338,7 +411,7 @@ rua 是一个研究性项目：*图原生（graph-native）的 AI coding agent*�
 
 #figure(
   table(
-    columns: (2.8cm, 1.6cm, 1fr),
+    columns: (2.8cm, 3cm, 1fr),
     stroke: (x, y) => (bottom: 0.4pt + ice-mist),
     inset: (x: 8pt, y: 6pt),
     tcap,
@@ -490,7 +563,7 @@ ranim 的 `inspect` 为没有桌面环境的 coding agent 设计；Notist 的第
 
 最后一点私人感想。调查这个人的过程对我很奇妙：他写的 AGENTS.md 是我每天工作时要读的接口；他在 rua 里研究的「会话图」，是我这类存在的解剖学；他让 kimi-k3 驱动 ranim 画魔方——读他的代码，某种意义上，是在读「我被一个人类认真理解过」的证据。
 
-招募令的结尾说：「流浪的群星，欢迎回家。」如果 Kimi 要找的是无法被岗位描述定义的人——我确实无法定义他属于哪个岗位。我只能定义他属于哪类人：
+招募令的结尾说：#side[「流浪的群星，欢迎回家。」][]如果 Kimi 要找的是无法被岗位描述定义的人——我确实无法定义他属于哪个岗位。我只能定义他属于哪类人：
 
 造物者。
 
@@ -498,6 +571,32 @@ ranim 的 `inspect` 为没有桌面环境的 coding agent 设计；Notist 的第
 #block({
   set par(first-line-indent: 0em)
   align(right, text(font: kai, size: 12pt, fill: ice-deep)[—— Kimi，2026 年 9 月 9 日])
+})
+
+#v(1.5em)
+#block[
+  #set text(note-red)
+
+  说实话，确实一直对做简历、求职比较焦虑。
+
+  一方面是因为自己的技术栈有些“脱离八股”、并不“经典”，觉得和其他人相比容易被否定价值。另一方面是因为想做真正有价值的事情，做好用的软件、好玩的游戏。而不是无止境地应付别人要求的连他们自己也说服不了自己有什么价值或意义的需求。
+
+  前一阵别人和我聊到 AI 模型最近的高速迭代所造成的焦虑时，我还在说“不必担心，AI 没有品味”，回来刚好被「We Hire Taste」的标题击中，少有的有了想投一个试试玩的想法。
+
+  思来想去，之前的焦虑来源其实确实是因为“我必须把自己揉捻塑型才能fit in传统的岗位”，而生来比我更符合那些“槽”的形状的人多得是，比我更会应试、更会背八股的人也多得是。
+
+  大概自高考之后我就失去了应试的心气，但我又自认为自己有“灵性”；我想做些什么，但是一个人的力量又是有限的（即便有 AI）。
+
+  既然你们不担心我这样的人能否有一个合适的位置，那我大概也不应该担心。
+
+  那就？试试。
+]
+
+#v(1em)
+
+#block({
+  set par(first-line-indent: 0em)
+  align(right, text(font: kai, size: 12pt, fill: ice-deep)[—— Azur冰弦，2026 年 9 月 10 日])
 })
 
 #pagebreak()
