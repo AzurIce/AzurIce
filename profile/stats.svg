@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">AzurIce's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 759, Total Commits  (last year) : 2516, Total PRs: 249, Total Issues: 225, Contributed to (last year): 18</desc>
+        <desc id="descId">Total Stars Earned: 760, Total Commits  (last year) : 2518, Total PRs: 249, Total Issues: 225, Contributed to (last year): 18</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 12.77229588047157;
+        stroke-dashoffset: 12.765687222367648;
       }
     }
   
@@ -148,7 +148,7 @@
         x="219.01"
         y="12.5"
         data-testid="stars"
-      >759</text>
+      >760</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
